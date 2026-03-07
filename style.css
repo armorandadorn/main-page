@@ -1,0 +1,64 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+}
+
+.slideshow {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    animation: slideshow 15s infinite;
+    z-index: -1;
+}
+
+@keyframes slideshow {
+    0% { background-image: url('https://i.etsystatic.com/il/fullxfull/4465559436/0.jpg'); }
+    33% { background-image: url('https://i.etsystatic.com/il/fullxfull/4464098362/0.jpg'); }
+    66% { background-image: url('https://i.etsystatic.com/il/fullxfull/1828917309/0.jpg'); }
+    100% { background-image: url('https://i.etsystatic.com/il/fullxfull/4465559436/0.jpg'); }
+}
+
+.content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.shop-button {
+    background: linear-gradient(to bottom, #333, #000);
+    border: none;
+    padding: 20px 40px;
+    font-size: 28px;
+    font-family: 'Cinzel', serif;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+    transition: all 0.3s;
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+.shop-button:hover {
+    box-shadow: 0 2px 8px rgba(0,0,0,0.4), inset 0 1px 0 rgba(255,255,255,0.2);
+    transform: translateY(2px);
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
